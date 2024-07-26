@@ -6,13 +6,15 @@
 # sum78([1, 1, 7, 8, 2]) → 4
 
 def sum78(nums):
-  sum = 0
-  isBtw = False
-  for n in nums:
-    if n == 7:
-      isBtw = True
-    if not isBtw:
-      sum += n
-    if n == 8 and isBtw
-      isBtw = False
-  return sum
+    total_sum = 0
+    is_btw = False
+    
+    for num in nums:
+        if num == 7:
+            is_btw = True
+        elif num == 8 and is_btw:
+            is_btw = False
+        elif not is_btw:
+            total_sum += num
+    
+    return total_sum
